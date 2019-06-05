@@ -8,4 +8,4 @@ def number_of_lines(filename=""):
             if not numlines:
                 break
             lines += 1
-        return lines 
+        return lines
