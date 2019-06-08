@@ -57,3 +57,23 @@ class Rectangle(Base):
     def y(self, value):
         self.x_y_valid("y", value)
         self.__y = value
+
+    def area(self):
+        return self.width * self.height
+
+    def display(self):
+        for k in range(self.y):
+            print()
+        for i in range(0, self.height):
+            print(' ' * self.x, end='')
+            for j in range(0, self.width):
+                print("{}".format('#'), end='')
+            print()
+
+    def __str__(self):
+        a = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
+        return(a.format(self.id, self.x, self.y, self.width, self.height))
+
+   #def update(self, *args):
+
+
