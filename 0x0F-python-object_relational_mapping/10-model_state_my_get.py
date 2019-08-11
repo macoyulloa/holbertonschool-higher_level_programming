@@ -14,7 +14,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).order_by(State.id).filter(State.name.like(sys.argv[4])).first()
+    part1_state = session.query(State).order_by(State.id)
+    state = part1_state.filter(State.name.like(sys.argv[4])).first()
     if state:
         print(state.id)
     else:
