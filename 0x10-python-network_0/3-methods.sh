@@ -1,3 +1,3 @@
 #!/bin/bash
 # DELETE request to the URL
-curl -sI $1 | grep Allow: | cu t -b 8-25
+curl -sI $1 | grep Allow: | cut -d " " -f2- 
