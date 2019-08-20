@@ -1,3 +1,3 @@
 #!/bin/bash
-# Send a JSON POST 
-curl -sd $2 -X POST $1 
+# Send a JSON POST
+curl -sd "$2" -X "POST" "$1"
