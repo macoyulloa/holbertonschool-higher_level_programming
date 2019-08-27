@@ -6,8 +6,8 @@ from sys import argv
 if __name__ == "__main__":
     " POST request, display a body and mail "
     url = "http://0.0.0.0:5000/search_user"
-    if argv[2]:
-        values = {'q': argv[2]}
+    if len(argv) > 1:
+        values = {'q': argv[1]}
     else:
         values = {'q': ""}
     req_post = requests.post(url, data=values)
